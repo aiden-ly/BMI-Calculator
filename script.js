@@ -26,6 +26,10 @@ function calculate() {
   
 }
 
+function bmi_equation() {
+  return;
+}
+
 function clear() {
   return;
 }
