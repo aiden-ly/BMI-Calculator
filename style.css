@@ -2,7 +2,7 @@ body {
   font-family: Trebuchet MS;
   font-size: 18px;
 	background: rgb(40,115,217);
-  background: linear-gradient(58deg, rgba(40,115,217,1) 0%, rgba(114,27,167,1) 60%,   rgba(96,44,128,1) 83%, rgba(45,18,61,1) 100%);
+  background: linear-gradient(58deg, rgba(50,112,209,1) 0%, rgba(87,34,179,1) 50%, rgba(85,44,128,1) 75%, rgba(78,20,97,1) 100%);
 	background-size: 300% 300%;
 	animation: gradient 10s ease infinite;
   width: 100%;
@@ -26,28 +26,48 @@ body {
     width: 100%;
     bottom: 0;
     text-align: center;
-    resize: none;
 }
 
-.textbox{
+.textbox{ /* The entire white box */
+    filter: drop-shadow(10px 15px 20px #000); 
     position: absolute;
     top: 50%;
     left: 50%;
     transform:translate(-50%, -50%);
+    height: 285px;
     width: 400px;
     background: white;
     border: 2px solid black;
     border-radius: 20px;
 }
 
-.interactive {
-  opacity: 1;
+.info {
+  position: relative;
   padding: 20px;
+}
+
+.interactive { /* The interactive buttons and inputs (should fade out after calculating) */
+  position: absolute;
+  opacity: 1;
+}
+
+.result { /* Text that should appear showing the BMI, calories to gain/lose weight, and a button to return */
+  position: absolute;
+  line-height: 1.6;
+  opacity: 0;
+  pointer-events: none;
+  word-wrap: break-word
 }
 
 .buttons {
   display: flex;
   justify-content: center;
+
+}
+
+select {
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 input {
