@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>BMI Calculator</title>
+</head>
+<body>
+    <div class="textbox">
+      <div class="interactive"
+        <p>Sex:
+          <input type="radio" name="sex" value="Male">Male
+          <input type="radio" name="sex" value="Female">Female
+        </p>
+        <p>Height (cm):
+            <input type="text" id="height"><br>
+        </p>
+
+        <p>Weight (kg):
+            <input type="text" id="weight"><br>
+        </p>
+        <div class="buttons">
+          <button onclick='calculate()'>Calculate BMI</button>
+          <button onclick='clear()'>Clear</button>
+        </div>
+      </div>
+      <p id="result"></p>
+    </div>
+    <div class="credits">
+      Developed by Tony Lin and Aiden Ly for Recess Hacks 3.0.
+    </div>
+</body>
+</html>
