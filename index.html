@@ -11,14 +11,16 @@
 <body>
     <div class="textbox">
       <div class="info">
-        <div class="interactive"
+        <div class="interactive">
           <p>Sex:
             <input type="radio" name="sex" value="Male">Male
             <input type="radio" name="sex" value="Female">Female
           </p>
+          
           <p>Age:
               <input type="text" id="age" maxlength="3" size="3"><br>
           </p>
+          
           <p>Activity Level: 
             <select name="activity" id="activity">
               <option value="1.2">Little to no exercise</option>
@@ -28,20 +30,28 @@
               <option value="1.9">Extensive exercise 6–7 days/week</option>
             </select>
           </p>
+          
           <p>Height (cm):
-              <input type="text" id="height"><br>
+              <input type="text" id="height" maxlength="3"><br>
           </p>
   
           <p>Weight (kg):
-              <input type="text" id="weight"><br>
+              <input type="text" id="weight" maxlength="3"><br>
           </p>
+          
           <div class="buttons">
             <button onclick='calculate()'>Calculate BMI</button>
-            <button onclick='clear()'>Clear</button>
+            
+            <button onclick='reload()'>Clear</button>
           </div>
         </div>
         <div class="result">
-          Your BMI is <strong>variable.</strong> These are what appear when Calculate BMI is clicked. 
+          <div class ="resulttext">
+            <p id="resulttext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="resultbutton">
+            <button onclick='reload()'>Reset</button>
+          </div>
         </div>
       </div>
     </div>
