@@ -31,17 +31,18 @@ function calculate() {
     return;
   }
 
-  height = parseFloat(height) / 100;
+  height = parseFloat(height) / 100; /* cm to m */
   weight = parseFloat(weight);
   age = parseInt(age);
   activity = parseFloat(activity);
 
   equation(height, weight, sex, activity, age);
   
-
+  document.getElementsByClassName('interactive') [0].classList.toggle('fade'); /* Fade out the input boxes */
   document.getElementsByClassName('interactive')[0].style.opacity = '0';
   document.getElementsByClassName('interactive')[0].style.pointerEvents = 'none';
-  
+
+  document.getElementsByClassName('result')[0].classList.toggle('fade'); /* Fade in the result */
   document.getElementsByClassName('result')[0].style.opacity = '1';
   document.getElementsByClassName('result')[0].style.pointerEvents = 'auto';
 }
@@ -82,13 +83,9 @@ function equation(height, weight, sex, activity, age) {
   }
   else if (bmi > 40) {
     classification = 'severely overweight';
-    advice = `it is recommeneded that you eat in a deficit to lose weight. You would need ${amr-500} calories to lose a pound per week. Please consult your doctor for advice as soon as possible, as your health may be  severely at risk. Try eating more low-calorie foods like watermelon, vegetables, and yogurt while drinking lots of water, in order to keep yourself from feeling hungry. Remember, BMI does not take your muscle mass and body fat into account, so this advice may not apply if you have low fat.`;
+    advice = `it is recommeneded that you eat in a deficit to lose weight. You would need ${amr-500} calories to lose a pound per week. Please consult your doctor for advice as soon as possible, as your health may be greatly at risk. Try eating more low-calorie foods like watermelon, vegetables, and yogurt while drinking lots of water, in order to keep yourself from feeling hungry. Remember, BMI does not take your muscle mass and body fat into account, so this advice may not apply if you have low fat.`;
   }
 
   document.getElementById("resulttext").innerHTML = `Your BMI is ${bmi}. That is considered ${classification}. To maintain your weight, you would need to eat ${amr} calories, but ${advice}`;
  
 }
-
-
-
-

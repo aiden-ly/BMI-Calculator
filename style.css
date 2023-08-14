@@ -20,8 +20,18 @@ body {
 	}
 }
 
+.sitename {
+  padding-top: 10px;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
 .credits {
     color: white;
+    padding-bottom: 10px;
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -48,19 +58,29 @@ body {
 
 .interactive { /* The interactive buttons and inputs (should fade out after calculating) */
   position: absolute;
+  transition: 1s ease;
   opacity: 1;
+}
+
+.interactive.fade {
+  opacity: 0;
 }
 
 .result { /* Text that should appear showing the BMI, calories to gain/lose weight, and a button to return */
   position: relative;
   line-height: 1.3;
+  transition: 1s ease;
   opacity: 0;
   pointer-events: none;
 }
 
+.result.fade {
+  opacity: 1;
+}
+
 .resulttext {
   position: absolute;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .resultbutton {
